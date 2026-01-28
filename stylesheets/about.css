@@ -1,0 +1,108 @@
+*{
+  text-decoration: none;
+}
+
+.intro-section {
+  padding: 50px 50px;
+  background-color: rgb(0, 67, 0);
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+.intro-container {
+  width: 70%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.img-left {
+  width: 200px;
+  height: 200px;
+}
+
+.img-left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.name {
+  color: #E59900;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+}
+
+.stats h3 {
+  margin: 10px 0;
+  font-size: 28px;
+  color: #E59900;
+}
+
+.stats p {
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.projects-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E59900;
+  max-width: 200px;
+  border: 1px solid #E59900;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projects-btn button {
+  padding: 16px 22px;
+  background-color: rgb(0, 67, 0);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.projects-btn span{
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  overflow: hidden;
+
+}
+.signature {
+  margin-top: 30px;
+  font-family: cursive;
+  font-size: 40px;
+}
+.profile-desc {
+  width: 30%;
+}
+
+/* 📱 Mobile */
+@media (max-width: 950px) {
+  .intro-section {
+    padding: 20px 20px;
+    flex-direction: column;
+    gap: 0;
+  }
+  .intro-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .stats {
+    margin-bottom: 10px;
+  }
+  .profile-desc {
+    border-top: 1px solid white;
+    width: 100%;
+  }
+}

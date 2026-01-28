@@ -1,0 +1,146 @@
+.projects-section {
+  padding: 50px 50px;
+  background-color: rgb(232, 232, 232);
+}
+
+.project-page{
+  margin: 0;
+}
+
+.projects-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.project-color {
+  color: #E59900;
+}
+
+.projects-line button {
+  padding: 16px 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(0, 67, 0);
+  color: white;
+  font-weight: bold;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+}
+
+.right-side {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.left-side {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.project-box {
+  padding: 6px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 20px;
+  height: 500px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.project-box img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  max-height: 350px;
+  cursor: pointer;
+}
+
+.project-keywords {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.project-keywords p {
+  padding: 6px;
+  font-size: 14px;
+  width: 33%;
+  background-color: #E59900;
+  border-radius: 10px;
+}
+
+.projects-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.projects-title h2 {
+  margin: 0;
+  font-size: 20px;
+}
+.projects-title button {
+  padding: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+@media (max-width: 950px) {
+  .projects-section {
+    padding: 30px 30px;
+  }
+  .projects-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+  .right-side {
+    width: 100%;
+    flex-direction: row;
+  }
+  .left-side {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 678px) {
+  .projects-section {
+    padding: 30px 30px;
+  }
+  .projects-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+  .right-side {
+    width: 100%;
+    flex-direction: column;
+  }
+  .left-side {
+    width: 100%;
+    flex-direction: column;
+  }
+  .project-box {
+    width: 100%;
+  }
+}
+
+

@@ -1,0 +1,91 @@
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 15px 28px;
+  background-color: rgb(0, 67, 0);
+  color: white;
+  border: 1px solid green;
+  border-radius: 20px;
+  margin-bottom: 5px;
+
+}
+
+.logo {
+  width: 50%;
+  padding-left: 30px;
+}
+
+.logo a {
+  margin: 0;
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  padding-right: 50px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links a.contact-page {
+  color: rgb(0, 67, 0);
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* Hamburger Icon  */
+@media (max-width: 950px ) {
+  .nav-links {
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+  }
+
+  .logo{
+    width: auto;
+    padding-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    padding: 16px 0;
+    background-color: rgb(0, 67, 0);
+  }
+  .nav-links a{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-links.active{
+    display: flex;
+  }
+}

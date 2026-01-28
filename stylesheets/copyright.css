@@ -1,0 +1,21 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: rgb(0, 67, 0);
+  padding: 12px 50px;
+}
+.copyright p {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .copyright {
+    padding: 12px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .moblie-hide {
+    display: none;
+  }
+}
