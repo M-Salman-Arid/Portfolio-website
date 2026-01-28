@@ -32,8 +32,9 @@
   box-shadow: 5px 5px 10px gray;
 }
 .service-box img {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
 }
 .service-description {
   display: -webkit-box;

@@ -52,15 +52,15 @@
   align-items: flex-start;
   background-color: white;
   border-radius: 20px;
-  height: 500px;
+  height: 450px;
   box-shadow: 5px 5px 10px gray;
 }
 
 .project-box img {
   width: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 20px;
-  max-height: 350px;
   cursor: pointer;
 }
 
