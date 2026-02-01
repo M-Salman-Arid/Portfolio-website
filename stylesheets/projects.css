@@ -3,7 +3,7 @@
   background-color: rgb(232, 232, 232);
 }
 
-.project-page{
+.project-page {
   margin: 0;
 }
 
@@ -13,6 +13,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
 .project-color {
   color: #E59900;
 }
@@ -69,6 +70,7 @@
   gap: 8px;
   width: 100%;
 }
+
 .project-keywords p {
   padding: 6px;
   font-size: 14px;
@@ -90,6 +92,7 @@
   margin: 0;
   font-size: 20px;
 }
+
 .projects-title button {
   padding: 8px;
   background-color: black;
@@ -102,17 +105,21 @@
   .projects-section {
     padding: 30px 30px;
   }
+
   .projects-line {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .projects-container {
     flex-direction: column;
   }
+
   .right-side {
     width: 100%;
     flex-direction: row;
   }
+
   .left-side {
     width: 100%;
     flex-direction: row;
@@ -123,24 +130,33 @@
   .projects-section {
     padding: 30px 30px;
   }
+
   .projects-line {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .projects-container {
     flex-direction: column;
   }
+
   .right-side {
     width: 100%;
     flex-direction: column;
   }
+
   .left-side {
     width: 100%;
     flex-direction: column;
   }
+
   .project-box {
     width: 100%;
   }
 }
 
 
+html,
+body {
+  overflow-x: hidden;
+}

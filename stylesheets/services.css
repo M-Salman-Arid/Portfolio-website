@@ -24,6 +24,7 @@
   display: flex;
   gap: 20px;
 }
+
 .service-box {
   width: 33.33%;
   padding: 16px;
@@ -31,11 +32,13 @@
   border-radius: 10px;
   box-shadow: 5px 5px 10px gray;
 }
+
 .service-box img {
   width: 70px;
   height: 70px;
   border-radius: 15px;
 }
+
 .service-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -43,7 +46,7 @@
   overflow: hidden;
 }
 
-.service-description.expanded{
+.service-description.expanded {
   -webkit-line-clamp: unset;
   display: block;
 }
@@ -52,14 +55,22 @@
   .serv-display {
     padding: 20px 20px;
   }
+
   .serv-heading {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .my-services {
     flex-direction: column;
   }
-  .service-box{
+
+  .service-box {
     width: 100%;
   }
+}
+
+html,
+body {
+  overflow-x: hidden;
 }

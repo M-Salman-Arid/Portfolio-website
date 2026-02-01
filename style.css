@@ -1,10 +1,112 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ffffff;
   color: #222;
+}
+
+/* Prevent accidental horizontal scroll caused by transforms/large elements */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* --- Scroll & Load Animations --- */
+
+/* Base: hidden state for animated elements */
+.scroll-fade-in,
+.scroll-slide-left,
+.scroll-slide-right,
+.scroll-scale-up,
+.scroll-blur {
+  opacity: 0;
+  transform-origin: center center;
+  will-change: transform, opacity, filter;
+  transition: opacity 700ms cubic-bezier(.2, .9, .2, 1), transform 700ms cubic-bezier(.2, .9, .2, 1), filter 700ms ease;
+}
+
+.scroll-fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-slide-left {
+  transform: translateX(-28px);
+}
+
+.scroll-slide-left.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.scroll-slide-right {
+  transform: translateX(28px);
+}
+
+.scroll-slide-right.in-view {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.scroll-scale-up {
+  transform: scale(.96) translateY(6px);
+}
+
+.scroll-scale-up.in-view {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.scroll-blur {
+  filter: blur(6px) translateY(6px);
+}
+
+.scroll-blur.in-view {
+  filter: blur(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Stagger helper: each element can receive a small delay via inline style or via JS */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 560ms ease, transform 560ms ease;
+}
+
+.stagger-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* images should be crisp and animate smoothly */
+img.scroll-scale-up {
+  display: block;
+  backface-visibility: hidden;
+}
+
+/* Subtle entrance for the main intro */
+.intro-box.scroll-fade-in {
+  transform: translateY(10px);
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .scroll-fade-in,
+  .scroll-slide-left,
+  .scroll-slide-right,
+  .scroll-scale-up,
+  .scroll-blur,
+  .stagger-item {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
 }

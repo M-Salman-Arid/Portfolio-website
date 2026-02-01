@@ -1,0 +1,640 @@
+/* Animation and Transition Styles for Portfolio */
+
+/* Smooth transitions for all interactive elements */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Header animations */
+header {
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo hover effect */
+.logo a {
+  transition: transform 0.18s ease, color 0.18s ease;
+  will-change: transform;
+}
+
+.logo a:hover {
+  transform: scale(1.03);
+  color: #2563eb;
+}
+
+/* Navigation links hover effect */
+.nav-links a {
+  transition: color 0.18s ease, transform 0.18s ease;
+  position: relative;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Menu toggle animation */
+.menu-toggle {
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.05);
+  color: #2563eb;
+}
+
+/* Display section animation */
+.np-display {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Intro box animations */
+.intro-box {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.greeting {
+  animation: fadeInLeft 0.6s ease-out 0.4s forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.name {
+  animation: pulse 2s ease-in-out infinite;
+  color: #2563eb;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Button animations */
+button,
+.btn,
+.contact-page {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+  position: relative;
+  overflow: hidden;
+  touch-action: manipulation;
+  will-change: transform, box-shadow;
+}
+
+button:hover,
+.btn:hover,
+.contact-page:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.18);
+}
+
+button::before,
+.btn::before,
+.contact-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+button:hover::before,
+.btn:hover::before,
+.contact-page:hover::before {
+  left: 100%;
+}
+
+/* Card animations */
+.service-card,
+.project-card,
+.skill-card,
+.education-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+  animation: fadeIn 0.6s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.service-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image hover zoom */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Section fade in on scroll effect */
+section {
+  animation: fadeInSection 0.8s ease-out forwards;
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input field animations */
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+  border: 2px solid #ddd;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+  transform: scale(1.02);
+}
+
+/* Text animation */
+h1,
+h2,
+h3 {
+  transition: all 0.3s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: #2563eb;
+  transform: scale(1.02);
+}
+
+/* Footer animation */
+footer {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SCROLL EFFECTS ===== */
+
+/* Scroll fade in animation */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll slide in from left */
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-slide-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll slide in from right */
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-slide-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll scale up */
+.scroll-scale-up {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-scale-up.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Scroll bounce in */
+.scroll-bounce {
+  animation: scrollBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes scrollBounce {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Parallax effect on scroll */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.1s linear;
+}
+
+/* Rotate on scroll */
+.scroll-rotate {
+  transition: transform 0.6s ease-out;
+}
+
+.scroll-rotate.in-view {
+  transform: rotate(0deg);
+}
+
+/* Stagger animation for multiple elements */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.stagger-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-item:nth-child(1).in-view {
+  transition-delay: 0.1s;
+}
+
+.stagger-item:nth-child(2).in-view {
+  transition-delay: 0.2s;
+}
+
+.stagger-item:nth-child(3).in-view {
+  transition-delay: 0.3s;
+}
+
+.stagger-item:nth-child(4).in-view {
+  transition-delay: 0.4s;
+}
+
+.stagger-item:nth-child(5).in-view {
+  transition-delay: 0.5s;
+}
+
+.stagger-item:nth-child(6).in-view {
+  transition-delay: 0.6s;
+}
+
+/* Scroll reveal with blur */
+.scroll-blur {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-blur.in-view {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Smooth scroll appearance */
+.fade-in-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in-scroll.visible {
+  opacity: 1;
+}
+
+/* Counter animation on scroll */
+.count-up {
+  transition: all 0.6s ease-out;
+}
+
+.count-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
+/* Link transition */
+a {
+  transition: color 0.18s ease;
+}
+
+a:hover {
+  color: #2563eb;
+}
+
+/* Smooth page transitions */
+body {
+  transition: background-color 0.3s ease;
+}
+
+/* Icon animations */
+i,
+.icon {
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Backdrop blur effect on hover */
+.overlay {
+  transition: all 0.3s ease;
+}
+
+.overlay:hover {
+  backdrop-filter: blur(5px);
+}
+
+/* Stagger animation for list items */
+li {
+  animation: slideInLeft 0.6s ease-out backwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Bounce animation */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 3s linear infinite;
+}
+
+/* Shake animation */
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.shake:hover {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Color transition for links */
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2563eb;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Loading animation */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: loading 2s linear infinite;
+}
+
+/* Fade in and scale animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-scale {
+  animation: fadeInScale 0.5s ease-out;
+}
+
+/* Smooth color transitions for text */
+p,
+span {
+  transition: color 0.3s ease;
+}
+
+/* Glow effect */
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(37, 99, 235, 0.8);
+  }
+}
+
+/* Flip animation */
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.flip {
+  animation: flip 0.6s ease-in-out;
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Removed broad global transform transition (caused jitter). Specific transitions
+   are defined on interactive elements above for smooth, predictable motion. */

@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M-Salman Skills</title>
+  <title>M-Salman Services</title>
   <link rel="stylesheet" href="stylesheets/header.css">
   <link rel="stylesheet" href="stylesheets/services.css">
   <link rel="stylesheet" href="stylesheets/contact.css">
   <link rel="stylesheet" href="stylesheets/footer.css">
   <link rel="stylesheet" href="stylesheets/copyright.css">
+  <link rel="stylesheet" href="stylesheets/animation.css">
 </head>
+
 <body>
   <header>
     <div class="logo">
-      <a href="#" class="st-name"><i>Muhammad Salman </i></a>
+      <a href="index.html" class="st-name"><i>Muhammad Salman </i></a>
     </div>
     <div class="menu-toggle" id="menuToggle">
-      👌
+      &#9776;
     </div>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About Me</a>
+      <a href="index.html#about">About Me</a>
       <a href="#services">Services</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
       <a class="contact-page" href="#contact">Contact Me</a>
     </nav>
   </header>
@@ -32,10 +35,12 @@
       <p>-- Services</p>
       <div class="serv-heading">
         <h1> Services I Provide </h1>
-        <button> View All Services →</button>
+        <a href="services.html">
+          <button> View All Services →</button>
+        </a>
       </div>
       <div class="my-services">
-        <div class="service-box">
+        <div class="service-box scroll-fade-in stagger-item" style="transition-delay:120ms">
           <img src="Pictures/web-developement service.jpg" alt="icon">
           <h2>Web Development</h2>
           <p class="service-description">
@@ -46,7 +51,7 @@
           </p>
           <a href="#" class="servToggle">Learn more</a>
         </div>
-        <div class="service-box">
+        <div class="service-box scroll-fade-in stagger-item" style="transition-delay:200ms">
           <img src="Pictures/ai agent developement service.jpg" alt="icon">
           <h2>AI Agent Developement</h2>
           <p class="service-description">
@@ -57,7 +62,7 @@
           </p>
           <a href="#" class="servToggle">Learn more</a>
         </div>
-        <div class="service-box">
+        <div class="service-box scroll-fade-in stagger-item" style="transition-delay:280ms">
           <img src="Pictures/python-development-service-banner.webp" alt="icon">
           <h2>Python Developement</h2>
           <p class="service-description">
@@ -67,7 +72,7 @@
           </p>
           <a href="#" class="servToggle">learn more</a>
         </div>
-        <div class="service-box">
+        <div class="service-box scroll-fade-in stagger-item" style="transition-delay:360ms">
           <img src="Pictures/data entry service.jpg" alt="icon">
           <h2>Data Entry Management</h2>
           <p class="service-description">
@@ -78,7 +83,7 @@
           </p>
           <a href="#" class="servToggle">Learn more</a>
         </div>
-        <div class="service-box">
+        <div class="service-box scroll-fade-in stagger-item" style="transition-delay:440ms">
           <img src="Pictures/digital-marketing servce.jpg" alt="icon">
           <h2>Digital Marketing</h2>
           <p class="service-description">
@@ -90,7 +95,7 @@
           </p>
           <a href="#" class="servToggle">Learn more</a>
         </div>
-        <div class="service-box">
+        <div class="service-box scroll-fade-in stagger-item" style="transition-delay:520ms">
           <img src="Pictures/virtual assistan service.jfif" alt="icon">
           <h2>Virtual Assistant</h2>
           <p class="service-description">
@@ -105,8 +110,9 @@
 
     </section>
 
+
     <section class="contact-section" id="contact">
-      <div class="contact-left">
+      <div class="contact-left scroll-fade-in scroll-slide-left" style="transition-delay:120ms">
         <div class="contact-heading">
           <p>
             <span class="contact-tag">-</span> <b>Contact Us</b>
@@ -141,7 +147,7 @@
           <p>Firdous Market, Gullberg III, Lahore Pakistan</p>
         </div>
       </div>
-      <div class="form-right">
+      <div class="form-right scroll-fade-in scroll-slide-right" style="transition-delay:200ms">
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="737568fb-1667-49ce-912e-bd2bdab4b477">
           <p>Your Name*</p>
@@ -233,10 +239,11 @@
       </div>
     </div>
   </footer>
-
   <div class="copyright">
     <p>Copyright @ 2026 M-Salman. All Rights Reserved</p>
     <p class="moblie-hide">User Terms & Conditions | Privacy Policy</p>
   </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
